@@ -1,0 +1,20 @@
+<p>do you love me?</p>
+
+<form id="searchForm" action="search" method="post">
+    <input type="search" id="searchText" name="query" />
+</form>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+  document.getElementById('searchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (document.getElementById("searchText").value.includes("no") == true || document.getElementById("searchText").value.includes("No") == true){
+        document.getElementById("demo").innerHTML = "why not"
+      }
+      else{
+        document.getElementById("demo").innerHTML = "thank you"
+      }
+  }, false);
+
+</script>
