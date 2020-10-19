@@ -1,0 +1,49 @@
+
+<style>
+  * {position: relative;
+    top: 5%;
+  }
+
+  #text{
+    text-align: center;
+  }
+
+  #loveletter {
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14;
+    height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    position: relative;
+    display:block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12;
+    border-width: 3px;
+    margin-top: 16px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  html, body {
+  margin: 0; height: 100%; overflow: hidden
+}
+
+</style>
+
+<form id="Form" method="post">
+    <textarea  cols="40" id = "loveletter" ></textarea>
+</form>
+
+<button type="button" name="button" class = "button" onclick = "go()">done</button>
+
+<p id = "text">write your love letter here.</p>
+
+<script type="text/javascript">
+  function go (){
+    window.location.href="9thankyou.html";
+  }
+</script>

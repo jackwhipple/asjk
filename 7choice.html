@@ -1,0 +1,49 @@
+<style>
+  p {
+
+    position: relative;
+text-align: center;
+
+  }
+
+  .button {
+    position: relative;
+    display:block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16;
+    border-width: 3px;
+    margin-top: 16px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  body{
+    margin:0;
+    position: relative;
+    top: 40%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+</style>
+<body>
+  <p id = "instructions">would you like to write him a love letter?</p>
+
+
+    <button type="button" name="button" class = "button" onclick = "yes()">yes</button>
+    <button type="button" name="button" class = "button" onclick = "no()">no</button>
+</body>
+
+
+
+<script type="text/javascript">
+  // when video ends
+
+  // form stuff
+  function yes (){
+    window.location.href="8loveletter.html";
+  }
+  function no (){
+    window.location.href="9thankyou.html";
+  }
+</script>

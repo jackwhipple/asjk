@@ -1,0 +1,68 @@
+
+<style>
+ video.mine {
+  position: relative;
+}
+  html, body {
+  margin: 0; height: 100%; overflow: hidden
+}
+</style>
+
+<body id = "demo"> </body>
+<body onload="size()">
+
+<script type="text/javascript">
+  var sheet = document.createElement('style');
+  var amount;
+
+// set the style of video
+  if (window.innerWidth > '1200'){
+    sheet.innerHTML = "video.mine {width: 25%}";
+    document.body.appendChild(sheet);
+    amount = 16;
+  }
+  else if (window.innerWidth > '900'){
+    sheet.innerHTML = "video.mine {width: 33%}";
+    document.body.appendChild(sheet);
+    amount = 12;
+  }
+  else if (window.innerWidth >= '600'){
+    sheet.innerHTML = "video.mine {width: 50%}";
+    document.body.appendChild(sheet);
+    amount = 6;
+  }
+  if (window.innerWidth < '600') {
+    sheet.innerHTML = "video.mine {width: 100%}";
+    document.body.appendChild(sheet);
+    amount = 3;
+  }
+
+// make the videos appear
+  var counter = 0;
+  var text = document.getElementById("demo");
+  while(counter<amount){
+        // take out controls if you don't want them!
+        text.innerHTML += "<video class = 'mine'  name='Video Name' id= '" + counter + "' src='tearapart.mp4'></video>";
+        counter+=1;
+    }
+
+  // make videos play when you click
+  var i;
+    document.onclick = function() {
+      for (i = 0; i < amount; i++) {
+        document.getElementById(i).play();
+      }
+    };
+
+  // go to next page when all videos are done
+  var count_end = 0;
+    for (i = 0; i < amount; i++) {
+      document.getElementById(i).addEventListener('ended', function(event) {
+        count_end +=1;
+        if (count_end == amount){
+          window.location.href="5breakup.html";
+        }
+      })
+    }
+
+</script>
