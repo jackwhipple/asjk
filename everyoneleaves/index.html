@@ -1,0 +1,28 @@
+<style>
+.middle {
+  position: relative;
+  text-align: center;
+
+}
+
+body{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+
+<p class = "middle"> omegle </p>
+<form id="Form" method="post" class= "middle">
+    <input type="text" id="Text" name="query" autocomplete="off" />
+</form>
+
+<script type="text/javascript">
+  document.getElementById('Form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        window.location.href="1snowglobe.html";
+  }, false);
+</script>

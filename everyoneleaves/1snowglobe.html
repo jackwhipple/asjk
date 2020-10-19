@@ -1,0 +1,98 @@
+<style>
+  p {
+  text-align: center;
+  position: relative;
+  top:10%;
+
+  }
+
+  video.mine {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    width: 80vw; /* 90% of viewport vidth */
+    height: 45vw; /* ratio = 9/16 * 90 = 50.625 */
+    max-height: 70vh;
+    max-width: 124.4444vh;
+  }
+
+  #Text, #Form {
+    position: relative;
+    display:block;
+    font-family: "Times New Roman", Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16;
+    border-width: 3px;
+  }
+
+  #question, #Form{
+    visibility:hidden;
+    position: relative;
+    top:66%;
+  }
+
+  #Form{
+    margin-bottom: 16px;
+  }
+
+
+  #head{
+    position: relative;
+    font-weight: bold;
+
+
+  }
+  body{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+</style>
+
+<body>
+
+  <p id = "head">snowglobe's my body's snowglobe</p>
+  <p id = "instructions">if you can, breathe shallowly.</p>
+
+
+    <video class = "mine" controls="controls" name="Video Name" id="Movie" src="snowglobe.mp4"></video>
+    <p id = "question">do you like that?</p>
+
+    <form id="Form" method="post">
+      <input type="text" id="Text" name="query" autocomplete="off" />
+    </form>
+</body>
+
+<script type="text/javascript">
+  // when video ends
+  video = document.getElementById("Movie");
+  video.onended = function() {
+    document.getElementById("Form").style.visibility = 'visible';
+    document.getElementById("question").style.visibility = 'visible';
+  };
+
+  // form stuff
+  document.getElementById('Form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var text = document.getElementById("Text").value.toLowerCase();
+      var counter = 0
+      const no = ["maybe","no","n't"];
+      for (const i of no) {
+        if (text.includes(i) == true){
+          window.location.href="6ending.html";
+        }
+        else{counter+=1;}
+      }
+        if (counter == 3){
+          window.location.href="2songoflove.html";
+        }
+
+  }, false);
+</script>

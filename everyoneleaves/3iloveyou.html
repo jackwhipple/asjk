@@ -1,0 +1,16 @@
+
+<p id="demo"></p>
+
+<body onload="fill()">
+
+<script type="text/javascript">
+  function fill (){
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          var text = document.getElementById("demo");
+          var rate = 1/(h*w)*3000000;
+          setInterval(function(){text.innerHTML += "i love you ";}, rate);
+          setTimeout(function(){window.location.href="4tearapart.html";}, 5000)
+  }
+
+</script>

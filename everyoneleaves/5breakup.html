@@ -1,0 +1,61 @@
+<style>
+  p {
+    text-align: center;
+    position: relative;
+  }
+
+  video.mine {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    width: 80vw;
+    height: 45vw;
+    max-height: 70vh;
+    max-width: 124.4444vh;
+  }
+
+  #button {
+    position: relative;
+    display:block;
+    font-family: "Times New Roman", Times, serif;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16;
+    border-width: 3px;
+    visibility:hidden;
+    margin-top: 16px;
+  }
+
+  body{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+<body>
+  <p id = "instructions">if you can, please don't cry.</p>
+
+    <video class = "mine" controls="controls" name="Video Name" id="Movie" src="breakup.mp4">
+    </video>
+
+
+    <button type="button" name="button" id = "button" onclick = "go()">next</button>
+</body>
+
+
+
+<script type="text/javascript">
+  // when video ends
+  video = document.getElementById("Movie");
+  video.onended = function() {
+    document.getElementById("button").style.visibility = 'visible';
+  };
+
+  // form stuff
+  function go (){
+    window.location.href="6ending.html";
+  }
+
+</script>
